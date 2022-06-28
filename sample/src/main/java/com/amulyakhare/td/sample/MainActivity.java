@@ -93,12 +93,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             // fix for animation not playing for some below 4.4 devices
             if (drawable instanceof AnimationDrawable) {
-                holder.imageView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        ((AnimationDrawable) drawable).stop();
-                        ((AnimationDrawable) drawable).start();
-                    }
+                holder.imageView.post(() -> {
+                    ((AnimationDrawable) drawable).stop();
+                    ((AnimationDrawable) drawable).start();
                 });
             }
 

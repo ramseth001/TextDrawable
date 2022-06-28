@@ -130,14 +130,11 @@ public class ListActivity extends AppCompatActivity {
 
             // provide support for selected state
             updateCheckedState(holder, item);
-            holder.imageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // when the image is clicked, update the selected state
-                    ListData data = getItem(position);
-                    data.setChecked(!data.isChecked);
-                    updateCheckedState(holder, data);
-                }
+            holder.imageView.setOnClickListener(v -> {
+                // when the image is clicked, update the selected state
+                ListData data = getItem(position);
+                data.setChecked(!data.isChecked);
+                updateCheckedState(holder, data);
             });
             holder.textView.setText(item.data);
 
