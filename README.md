@@ -19,7 +19,7 @@ repositories{
 }
 
 dependencies {
-    compile 'com.github.ramseth001:TextDrawable:1.1.3'
+    compile 'com.github.ramseth001:TextDrawable:1.1.6'
 }
 ```
 
